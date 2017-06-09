@@ -3,7 +3,7 @@ library(data.table)
 df <- fread("household_power_consumption.txt", na.strings=c("?"))
 data <- df[(as.Date(df$Date, format="%d/%m/%Y") == '2007-02-01' | as.Date(df$Date, format="%d/%m/%Y") == '2007-02-02'), ]
 data$dt <- as.POSIXct(paste(as.Date(data$Date, format="%d/%m/%Y"), data$Time), format="%Y-%m-%d %H:%M:%S")
-#3
+#Plot4
 plot.new()
 png(filename="plot4.png", width = 480, height = 480)
 par(mfrow = c(2,2))
